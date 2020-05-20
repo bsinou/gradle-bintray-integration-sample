@@ -39,7 +39,8 @@ dependencies {
 sourceCompatibility = 1.8
 group = 'org.sinou.sandbox'
 // run gradle with "-Drealease=true" to *NOT* automatically append "-SNAPSHOT" to the version
-version = '0.1.0' + (!Boolean.valueOf(System.getProperty("release")) ? "-SNAPSHOT" : "")
+// version = '0.1.0' + (!Boolean.valueOf(System.getProperty("release")) ? "-SNAPSHOT" : "")
+version = '0.1.0'
 
 
 ext {
@@ -59,7 +60,7 @@ bintray {
     key = bintrayKey
 
     pkg {
-        repo = ' gradle-android-tests'
+        repo = 'gradle-android-tests'
         name = 'gradle-bintray-integration-sample'
         //userOrg = bintrayUser
         licenses = ['Apache-2.0']
